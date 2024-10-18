@@ -1,0 +1,18 @@
+{
+  "name": "itc-oop",
+  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "update": "npm update && checks update",
+    "uvu": "checks test",
+    "test": "npm run update && npm run uvu"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@kaineer/oop-checks": "^0.1.17"
+  }
+}
