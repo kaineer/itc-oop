@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>callbacks</title>
+  <style>
+    .container {
+      display: flex;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .item {
+      width: 100px;
+      height: 100px;
+      margin: auto;
+      background-color: #88c0d0;
+    }
+
+    .circle { border-radius: 50%; }
+    .red { background-color: #bf616a; }
+
+    .button {
+      position: absolute;
+      left: 50px;
+      top: 25px;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button class="button">button</button>
+    <div class="item"></div>
+  </div>
+  <script>
+    const button = document.querySelector(".button");
+    const item = document.querySelector(".item");
+
+    button.addEventListener("click", () => {
+      setTimeout(function() {
+        item.classList.add("circle");
+        setTimeout(function () {
+          item.classList.add("red");
+        }, 500);
+      }, 800);
+    });
+  </script>
+</body>
+</html>

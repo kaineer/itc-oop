@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>async/await</title>
+  <style>
+    .container {
+      display: flex;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .item {
+      width: 100px;
+      height: 100px;
+      margin: auto;
+      background-color: #88c0d0;
+    }
+
+    .circle { border-radius: 50%; }
+    .red { background-color: #bf616a; }
+
+    .button {
+      position: absolute;
+      left: 50px;
+      top: 25px;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button class="button">button</button>
+    <div class="item"></div>
+  </div>
+  <script>
+    const button = document.querySelector(".button");
+    const item = document.querySelector(".item");
+    const delay = (ms) => (
+      new Promise((resolve) => setTimeout(resolve, ms))
+    );
+
+    const runFor = async (label) => {
+      const start = Date.now();
+
+      for (let i = 0; i < 3; i++) {
+        await delay(1000);
+        const mark = Date.now();
+
+        console.log(label, (mark - start) / 1000);
+      }
+    }
+
+    button.addEventListener("click", async () => {
+      runFor("without await");
+      console.log(">> without await");
+
+      await runFor("with await");
+      console.log(">> with await");
+    })
+  </script>
+</body>
+</html>

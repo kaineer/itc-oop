@@ -13,6 +13,6 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@kaineer/oop-checks": "^0.1.17"
+    "@kaineer/oop-checks": "^0.1.26"
   }
 }

@@ -1,0 +1,50 @@
+body, html { margin: 0; padding: 0; }
+* { margin: 0; padding: 0; }
+
+#root {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#message {
+  font-size: 36px;
+  color: #81a1c1;
+}
+
+input {
+  margin: 8px;
+  font-size: 36px;
+  width: 400px;
+  text-align: left;
+}
+
+label {
+  width: 200px;
+  font-size: 36px;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+button {
+  font-size: 24px;
+  display: inline-block;
+}
+
+.pagination a {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #f06d06;
+
+  text-align: center;
+  line-height: 50px;
+  text-decoration: none;
+  color: white;
+
+  font-size: 24px;
+}
+
+.pagination a:active {
+  background-color: #f04d06;
+}
