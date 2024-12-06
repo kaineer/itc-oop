@@ -1,3 +1,0 @@
-const data = [{ id: 44, name: "........" }]
-
-const html = "<a href='/student/" + id + ">" + name ...
