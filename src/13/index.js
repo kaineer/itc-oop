@@ -3,6 +3,11 @@ const { readFileSync } = require("fs");
 
 const text = readFileSync(join(process.cwd(), "text.txt")).toString();
 
+
+// const validate = /\b[a-z]{3}\b/gi
+const validate = /([a-z]+).$/gim;
+const  res = text.match(validate);
+console.log(res);
 // Посчитайте и выведите в консоль:
 // [1] количество слов из двух букв (слова тоже выведите)
 // [2] количество слов из трех букв (слова тоже выведите)
