@@ -1,8 +1,16 @@
 # Работа с fetch
 
+```javascript
  * await fetch(url) // GET request
- * await fetch(url, { method: 'POST', body: { key: 'value' }})
+ * await fetch(url, {
+     method: 'POST',
+     // если хотим, чтобы содержимое восприняли, как json
+     headers: { 'content-type': 'application/json' },
+     // параметры с данными
+     body: JSON.stringify({ key: 'value' }, null, 0),
+   })
                     // POST request
+```
 
 ```javascript
 // Получаем список вакансий с сервера
@@ -20,3 +28,4 @@ const resp = await fetch("http://localhost:5000/login", {
 }); // но это еще не все
 
 const json = await resp.json(); // После этого данными можно пользоваться ```
+```
